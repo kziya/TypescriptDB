@@ -32,7 +32,7 @@ const user = UsersTable.add({
     password: 'some password',
     age: 20,
 });
-// You should save to the db File after changes
+// You should save to the user's file after changes
 UsersTable.save(); // async function
 ```
 Or update:
@@ -45,12 +45,12 @@ You can also find users:
 
 ```typescript
 import {IDbTableDataType} from "./db.types";
-// return array of the matched elems
+// returns array of the matched elems
 const users: (IUser & IDbTableDataType)[] = UsersTable.find({ name: 'example' });
 ```
 Find one user:
 ```typescript
-// returns first matced elem
+// returns first matched elem
 const user: IUser = UsersTable.findOne({ name: 'example'  });
 ```
 Find one user by id:
